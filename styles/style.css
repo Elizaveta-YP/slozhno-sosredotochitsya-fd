@@ -1,5 +1,228 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(--bg-picture);
+  background-position: center;    
+  background-size: cover;        
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-color: var(--page-color);
+  line-height: 23.4px;
+  font-size: 18px;
+}
+
+
+/*индикатор в темной теме*/
+.decorative-rec-indicator {
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent-bg-color, #FF0070);
+  border-radius: 50%;
+  box-shadow: 0 0 2px 4px var(--accent-bg-color, #FF0070);
+}
+
+.decorative-rec-indicator::before {
+  content: "REC";
+  position: absolute;
+  font-family: var(--page-font-family);
+  right: 23px;
+  top: -7px;
+  color: var(--theme-font-color, #FF0070);
+}
+/*конец индикатора*/
+
+/*стили для header*/
+
+.header {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr;
+   grid-template-rows: 1fr min-content 1fr;
+  align-items: start;
+  min-block-size: 100vh;
+  padding-inline-start: 3px;
+  /* margin-block-end: 40px; */
+  height: 100vh;
+  min-height: 648px;
+}
+
+/*уголки*/
+.decorated-zone::before {
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25.04px;
+  height: 25px;
+  border-left: 1px solid var(--decor-color);
+  border-bottom: 1px solid var(--decor-color);
+}
+
+.decorated-zone::after {
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25.04px;
+  height: 25px;
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
+}
+
+/*меню*/
+.header__theme-menu-item {
+display: grid;
+justify-content: end;
+align-items: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block-start: 45px;
+  padding-inline-end: 4px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 2px 12px;
+  text-transform: lowercase;
+  color: var(--menu-color);
+  background-color: none;
+    background: transparent;
+    font-size: 18px;
+}
+/*конец меню*/
+
+/*стили для заголовка*/
+.accent-letters {
+  color: var(--header-title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+   /* font-family: monospace; */
+   font-family: var(--page-font-family), monospace;
+}
+
+.main-title {
+  text-shadow: 4px 3px 0 var(--accent-color);
+  margin: 0;
+  /* margin-block-end: 55px; */
+  line-height: 96px;
+  /* font-weight: 355px; */
+  line-height: 95px;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	align-items: center;
+	grid-row: 2;
+  letter-spacing: 7px;
+ 
+  
+}
+/*конец стилей для заголовка*/
+
+/*стили для параграфа*/
+.header-description {
+  background-color: var(--decor-color);
+  font-weight: 700;
+  margin-block-start: 56px;;
+  /* margin-block-end: 66px; */
+   font-family: monospace;
+  color: var(--page-color);
+  /* width: 100%; */
+}
+/*конец стилей для параграфа*/
+
+
+/*секции*/
+.section {
+  display: grid;
+}
+
+/*секции*/
+.article-title {
+  color: var(--decor-color);
+  margin-block-end: 20px;
+  font-size: var(--article-titles);
+  font-weight: 700;
+   font-family: monospace;
+  font-size: 18px;
+  margin-block-start: 40px;
+  /* gap:20px; */
+}
+
+.section-title {
+  color: var(--page-color);
+  background-color: var(--decor-color);
+  font-size: var(--article-titles);
+   font-family: monospace;
+  margin-block-end: 10px;
+  font-weight: 700;
+}
+
+p {
+  color: var(--text-color);
+  font-size: var(--article-titles);
+ font-family: monospace;
+  font-weight: 400;
+}
+
+/**/
+.chapter-title {
+ background-color: var(--decor-color);
+ font-size: var(--article-titles);
+ font-family: monospace;
+ font-weight: 400;
+}
+
+/*стили для ссылки*/
+.link {
+  color: var(--text-color);
+  text-shadow: 2px 1px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+
+/*стили для картинок*/
+.section-gallery {
+   display: grid;
+   gap: 10px;
+}
+
+.gallery-item {
+  gap: 10px;
+}
+
+.gallery-list {
+    display: grid;
+    list-style-type: none;
+    padding-inline-start: 1px;
+    padding-inline-end: 1px;
+  }
+
+  .gallery-item-img {
+     max-width: 100%;
+    height: auto;        
+  object-fit: cover;
+  grid-auto-columns: 1fr;
+  }
+/*подвал*/
+  .footer {
+  display: grid;
+  place-content: center;
+  block-size: 100vh;
+  padding-inline: 10px;
+  position: relative;
+}
+
+.location {
+  display: grid;
+  justify-content: center;
+  margin-inline-start: 14px;
+  margin-inline-end: 13px;
 }
