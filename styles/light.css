@@ -9,8 +9,39 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --cover-image: url(../images/cover-image-light.png);
+  --decor-color: #353430;
+  --decor-color-subtitle: #ff8dcb;
+  --header-title-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --menu-color: #353430;
+  --text-color: #353430;
+  --color-title: #353430;
+  --default-color: #353430;
+  --button-color-hover: #32312d66;
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --cover-image: url(../images/cover-image-light.png);
+      --decor-color: #353430;
+      --decor-color-subtitle: #ff8dcb;
+      --header-title-color: #ffc2e6;
+      --accent-color: #ff8dcb;
+      --menu-color: #353430;
+      --text-color: #353430;
+      --color-title: #353430;
+      --default-color: #353430;
+      --button-color-hover: #32312d66;
+
+      /* Дублируем переменные светлой темы */
+    }
+  }
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-light .decorative-rec-indicator {
+  display: none;
+}
+
+.theme-light .header__theme-menu-button_type_light:default {
+  border: 1px solid var(--default-color);
 }
