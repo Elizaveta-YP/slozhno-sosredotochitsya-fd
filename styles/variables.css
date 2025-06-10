@@ -3,6 +3,7 @@
   и их переопределение под различные устройства
 */
 :root {
+  color-scheme: light dark;
   --header-title-color: #db00ff;
   --button-color: #ff0070;
   --button-color-hover: #ff007066;
@@ -18,4 +19,5 @@
   --page-color: #000028;
   --focus-color: #f1b2ce;
   --default-color: #ff0070;
+  --link-color-hover: #F1B2CE;
 }

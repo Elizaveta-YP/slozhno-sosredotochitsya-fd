@@ -18,7 +18,8 @@
   --text-color: #353430;
   --color-title: #353430;
   --default-color: #353430;
-  --button-color-hover: #32312d66;
+  --button-color-hover: #32312D;
+  }
 
   @media (prefers-color-scheme: light) {
     :root {
@@ -31,12 +32,9 @@
       --text-color: #353430;
       --color-title: #353430;
       --default-color: #353430;
-      --button-color-hover: #32312d66;
-
-      /* Дублируем переменные светлой темы */
+      --button-color-hover: #32312D;
     }
   }
-}
 
 .theme-light .decorative-rec-indicator {
   display: none;
