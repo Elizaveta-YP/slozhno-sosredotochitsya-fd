@@ -15,7 +15,8 @@
   --page-color: #000028;
   --focus-color: #f1b2ce;
   --default-color: #ff0070;
-   --link-color-hover: #F1B2CE;
+  --link-color-hover: #F1B2CE;
+  --article-titles: 18px;
 }
 
  @media (prefers-color-scheme: dark) {

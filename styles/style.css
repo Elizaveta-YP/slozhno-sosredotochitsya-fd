@@ -165,7 +165,6 @@
   color: var(--decor-color);
   font-size: var(--article-titles);
   font-weight: 700;
-  font-size: 18px;
   margin-block-start: 30px;
   margin-block-end: 18px;
   line-height: 1.35;
@@ -480,7 +479,6 @@ p {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-start: 2;
   }
 
   .gallery-item-5 {
@@ -509,7 +507,7 @@ p {
   }
 
   /*шапка*/
-  
+
   .decorated-zone::after {
     margin-inline-end: 7px;
   }
