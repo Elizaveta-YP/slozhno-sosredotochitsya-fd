@@ -10,6 +10,7 @@
   --color-title: #353430;
   --default-color: rgba(50, 49, 45, 0.4);
   --button-color-hover:rgba(50, 49, 45, 0.4);
+  --page-color: #353430;
   }
 
   @media (prefers-color-scheme: light) {
@@ -24,9 +25,11 @@
       --color-title: #353430;
       --default-color:rgba(50, 49, 45, 0.4);
       --button-color-hover: rgba(50, 49, 45, 0.4);
+      --page-color: #353430;
     }
+
+     .decorative-rec-indicator { 
+    display: none
+  }
   }
   
-     :root:not(.theme-dark) .decorative-rec-indicator {
-    display: none;
-  }

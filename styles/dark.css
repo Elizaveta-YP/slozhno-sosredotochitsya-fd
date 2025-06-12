@@ -44,8 +44,3 @@
   display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  .header__theme-menu-button_type_dark {
-    border: 1px solid var(--default-color);
-  }
-}
